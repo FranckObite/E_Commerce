@@ -49,7 +49,7 @@ class Ecommerce extends StatelessWidget {
                 width: size.width,
                 height: 200,
                 decoration:
-                    BoxDecoration(color: Color.fromARGB(255, 116, 11, 3)),
+                    BoxDecoration(color: Color.fromARGB(255, 167, 12, 64)),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 100),
@@ -77,31 +77,92 @@ class Ecommerce extends StatelessWidget {
             children: [
               monText(
                   text: "Se connecter avec",
-                  fontStyle: 15,
+                  fontStyle: 20,
                   macouleur: Color.fromARGB(255, 105, 103, 103)),
               SizedBox(height: 20),
-              monContainer(
-                raideur: 20,
-                couleur1: Color.fromARGB(255, 5, 51, 215),
-                Hhauteur: 50,
-                llargeur: 500,
+              Container(
+                height: 50,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 5, 51, 215),
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.facebook_outlined),
+                    monText(
+                        text: "Facebook",
+                        fontStyle: 20,
+                        macouleur: Colors.white)
+                  ],
+                ),
               ),
               SizedBox(height: 20),
-              monContainer(
-                raideur: 20,
-                couleur1: Color.fromARGB(255, 111, 112, 113),
-                Hhauteur: 50,
-                llargeur: 500,
+              Container(
+                height: 50,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(137, 94, 94, 95),
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    /*Image.asset(
+                      "images/git.png",
+                    ),*/
+                    monText(
+                        text: "Google", fontStyle: 20, macouleur: Colors.white)
+                  ],
+                ),
               ),
               SizedBox(height: 20),
-              monContainer(
-                raideur: 20,
-                couleur1: Color.fromARGB(255, 10, 1, 1),
-                Hhauteur: 50,
-                llargeur: 500,
+              Container(
+                height: 50,
+                width: 500,
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    /*Image.asset(
+                      "images/git.png",
+                    ),*/
+                    monText(
+                        text: "GitHub", fontStyle: 20, macouleur: Colors.white)
+                  ],
+                ),
+              ),
+              SizedBox(height: 40),
+              monText(
+                  text: "Inscription",
+                  fontStyle: 20,
+                  macouleur: Color.fromARGB(255, 167, 12, 64)),
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  monText(
+                      text: "Vous aveaz déjà un compte?",
+                      fontStyle: 20,
+                      macouleur: Color.fromARGB(255, 105, 103, 103)),
+                  SizedBox(width: 5),
+                  monText(
+                      text: "Connectez-vous",
+                      fontStyle: 20,
+                      macouleur: Color.fromARGB(255, 167, 12, 64)),
+                  SizedBox(width: 5),
+                  Icon(Icons.login_rounded)
+                ],
               ),
             ],
-          )
+          ),
+          Spacer(),
+          monText(
+              text:
+                  "En continuant, vous acceptez les conditions d'utilisations et politiques de confidentialité",
+              fontStyle: 10,
+              macouleur: Colors.black)
         ],
       ),
     ));
@@ -127,13 +188,14 @@ class Ecommerce extends StatelessWidget {
     );
   }
 
-  Container monContainer(
-      {required double raideur,
-      required Color couleur1,
-      required double Hhauteur,
-      required double llargeur}) {
+  Container monContainer({
+    required double raideur,
+    required Color couleur1,
+    required double hhauteur,
+    required double llargeur,
+  }) {
     return Container(
-      height: Hhauteur,
+      height: hhauteur,
       width: llargeur,
       decoration: BoxDecoration(
           color: couleur1,
